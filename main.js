@@ -30,10 +30,11 @@ form.addEventListener('submit', function(e) {
     document.getElementById('campoB').value = '';
 });
 
-document.getElementById('campoA').addEventListener('change', function(e) {
+    document.getElementById('campoB').addEventListener('change', function(e) {
     const campoA = Number(document.getElementById('campoA').value);
     const campoB = Number(document.getElementById('campoB').value);
     const errorMenssage = `O valor do Campo B: ${campoB} é menor que o valor do Campo A: ${campoA}`;
+    formEValido = validarFormulario(campoA, campoB);
 
     if (!formEValido) {
         const containerErrorMenssage = document.querySelector('.error-message');
